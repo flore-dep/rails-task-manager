@@ -1,0 +1,6 @@
+<h1> Index Page </h1>
+
+<% @tasks.each do |task| %>
+  <p> <%= link_to task.title, task_path(task) %> </p>
+<% end %>
+

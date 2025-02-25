@@ -1,0 +1,10 @@
+<%= form_with model: task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+    <% unless current_page?(new_task_path) %>
+       <%= f.check_box(:completed) %>
+    <% end %>
+  <%= f.submit %>
+<% end %>
